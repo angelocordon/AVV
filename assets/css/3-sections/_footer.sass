@@ -1,0 +1,65 @@
+footer
+  @extend	.container
+  line-height: 1em
+  padding: 20px
+  height: 180px
+  p, li
+    margin: 10px 0
+    font-size: 14px
+
+strong
+  font-weight: 600
+  text-transform: uppercase
+  font-size: 16px
+  margin-bottom: 10px
+
+.icon-space
+  min-width: 14px
+  height: 14px
+  display: inline-block
+  text-align: center
+  margin-right: 10px
+
+.contact
+  display: block
+  text-align: center
+  strong
+    display: block
+    text-align: center
+
+.links
+  display: none
+  @media (min-width: 800px)
+  display: block
+  li
+    list-style: none
+    text-transform: uppercase
+
+.social
+  display: block
+  text-align: center
+  i
+    font-size: 1.5em
+    margin: 10px 5%
+  .copy
+    font-size: 0.5em
+
+@media (min-width: 800px)
+  .contact, .links, .social
+    float: left
+
+  .contact
+    text-align: left
+    width: 35%
+    strong
+      text-align: left
+
+  .links
+    width: 25%
+    border-left: 1px solid #d8d8d8
+    border-right: 1px solid #d8d8d8
+
+  .social
+    width: 35%
+    float: right
+    padding-top: 25px
