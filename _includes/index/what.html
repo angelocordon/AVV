@@ -1,4 +1,11 @@
-<div class="section" id="what">
-  <h1>We build MVPs, design identities and build websites.</h1>
-  <!-- Logos -->
+<div class="what">
+  <h1>We build MVPs, design identities <br> and build websites.</h1>
+  <img src="/assets/img/bg-what.jpg" alt="We build MVPs, design identities and build websites." class="background">
+
+  <div class="logos">
+    {% for logo in site.data.settings.logos %}
+      <img src="/assets/img/logos/{{ logo.logo }}" alt="{{ logo.company }}" class="logo">
+    {% endfor %}
+  </div>
+
 </div>

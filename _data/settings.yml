@@ -32,3 +32,14 @@ seo:
 # NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
 
 #google-analytics-ua: UA-XXXXXX-X
+
+#-------------------------------
+# Client Logos
+
+logos:
+- {company: Ask a Nanny, logo: aan.png}
+- {company: Bevvy, logo: bevvy.png}
+- {company: The Great Baby Romp, logo: gbr.png}
+- {company: Life Well Organized, logo: lwo.png}
+- {company: Sovereign Gaming League, logo: sgl.png}
+- {company: Shiploop, logo: shiploop.png}
