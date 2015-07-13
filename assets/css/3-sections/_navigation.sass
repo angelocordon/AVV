@@ -23,7 +23,10 @@ nav
     width: 220px
 
 .menu
-  float: right
-  text-transform: uppercase
-  a
-    margin-left: 20px
+  display: none
+  @media (min-width: 568px)
+    display: block      
+    float: right
+    text-transform: uppercase
+    a
+      margin-left: 20px

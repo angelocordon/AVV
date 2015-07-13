@@ -23,16 +23,20 @@ $section-height: 100vh
     z-index: 2
   img.background
     position: absolute
-    left: 0
     top: 0
-    width: 100%
     height: auto
     opacity: 0.15
+    left: -325px
+    width: 280%
+    @media (min-width: 568px)
+      left: 0
+      width: 100%
 
 .what
   h1
     padding-top: $section-height/5
     margin-bottom: 100px
+    height: 235vh
 
 a.button
   z-index: 2
@@ -55,3 +59,6 @@ a.button
   margin: 0 auto
   position: relative
   z-index: 5
+
+.logo:nth-child(2)
+  margin-top: -50px
