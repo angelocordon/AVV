@@ -1,5 +1,5 @@
 # A Vivid Visual
-### v.3.0.1 (Chico)
+### v.3.0.1 (Agnes)
 
 www.avividvisual.com | hello@avividvisual.com
 
