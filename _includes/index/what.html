@@ -1,10 +1,12 @@
 <div class="what">
-  <h1>We build MVPs, design identities <br> and develop websites.</h1>
-  <img src="/assets/img/bg-what.jpg" alt="We build MVPs, design identities and develop websites." class="background">
+  <div class="container">
+    <h1>We build MVPs, design identities <br> and develop websites.</h1>
+    <img src="/assets/img/bg-what.jpg" alt="We build MVPs, design identities and develop websites." class="background">
 
-  <div class="logos">
-    {% for logo in site.data.settings.logos %}
-      <img src="/assets/img/logos/{{ logo.logo }}" alt="{{ logo.company }}" class="logo">
-    {% endfor %}
+    <div class="logos">
+      {% for logo in site.data.settings.logos %}
+        <img src="/assets/img/logos/{{ logo.logo }}" alt="{{ logo.company }}" class="logo">
+      {% endfor %}
+    </div>
   </div>
 </div>
