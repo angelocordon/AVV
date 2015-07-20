@@ -1,8 +1,5 @@
 .wrap
-  background: -webkit-linear-gradient($brand-color, #59929e)
-  background: -o-linear-gradient($brand-color, #59929e)
-  background: -moz-linear-gradient($brand-color, #59929e)
-  background: linear-gradient($brand-color, #59929e)
+  background: $font-color
 
 $section-height: 100vh
 .section
@@ -24,22 +21,83 @@ $section-height: 100vh
   img.background
     position: absolute
     top: 0
-    height: auto
-    opacity: 0.15
+    left: 0
+    width: auto
+    height: 100%
+    opacity: 0.5
+
+// WHY SECTION
+
+.why
+  img.background
     left: -325px
-    width: 280%
-    @media (min-width: 568px)
-      left: 0
+    opacity: 0.8
+    @media (min-width: 568px)  // mobile landscape
       width: 100%
+      height: auto
+      left: 0
+    @media (min-width: 768px) // tablet portrait
+      width: auto
+      height: 100%
+      left: -60%
+    @media (min-width: 1024px) // tablet landscape
+      width: 120%
+      height: auto
+      left: -10%
+
+// WHAT SECTION
+
 
 .what
-  height: 235vh
+  height: auto
+  padding-bottom: 100px
   h1
-    padding-top: $section-height/5
-    margin-bottom: 100px
-  @media (min-width: 600px)
-    height: 100vh
+    padding-top: 100px
+    margin-bottom: 50px
+  img.background
+    @media(min-width: 1024px)
+      width: 100%
+      height: auto
 
+.logos
+  max-width: 920px
+  display: block
+  margin: 0 auto
+  position: relative
+  z-index: 5
+
+img.logo
+  max-width: 300px
+  height: auto
+
+.logo:nth-child(2)
+  margin-top: -50px
+
+
+// WHO SECTION
+
+
+.who
+  h1
+    padding-top: 0
+    margin-top: 50% // For mobile (portrait)
+    @media (min-width: 568px) // For tablet - portrait
+      margin-top: 15%
+    @media (min-width: 768px)
+      margin-top: 50%
+    @media (min-width: 800px) // For tablet - landscape
+      margin-top: 20%
+  img.background
+    opacity: 0.3
+    @media (min-width: 568px)  // mobile landscape
+      width: 100%
+      height: auto
+    @media (min-width: 768px) // tablet portrait
+      width: auto
+      height: 100%
+    @media (min-width: 1024px)
+      width: 120%
+      height: auto
 
 a.button
   z-index: 2
@@ -55,17 +113,3 @@ a.button
   &:hover
     background-color: $brand-color
     border-color: $brand-color
-
-.logos
-  max-width: 920px
-  display: block
-  margin: 0 auto
-  position: relative
-  z-index: 5
-
-img.logo
-  max-width: 300px
-  height: auto
-
-.logo:nth-child(2)
-  margin-top: -50px
