@@ -10,8 +10,9 @@ email: hello@avividvisual.com
 menu:
 - {name: Work, url: '#'}
 - {name: About, url: '#'}
-- {name: Contact, url: '#'}
 - {name: Notes, url: '#'}
+- {name: Connect, url: '#'}
+
 
 #-------------------------------
 # SEO Section

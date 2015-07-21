@@ -9,6 +9,7 @@ nav
   line-height: $nav-height
   @extend .container
   position: fixed
+  padding: 0
 
 .brand, .menu
   display: inline-block
@@ -25,8 +26,15 @@ nav
 .menu
   display: none
   @media (min-width: 568px)
-    display: block
+    display: inline-block
     float: right
     text-transform: uppercase
     a
       margin-left: 20px
+
+.toggle
+  display: inline-block
+  float: right
+  font-size: 2em
+  @media (min-width: 568px)
+    display: none

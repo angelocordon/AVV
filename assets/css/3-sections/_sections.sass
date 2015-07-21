@@ -76,7 +76,6 @@ img.logo
 
 // WHO SECTION
 
-
 .who
   h1
     padding-top: 0
@@ -98,8 +97,18 @@ img.logo
     @media (min-width: 1024px)
       width: 120%
       height: auto
+  span
+    position: relative
+    z-index: 2
+    font-style: italic
 
-a.button
+a.hello
+  color: $brand-color
+  &:hover
+    color: #fff
+    font-weight: bold
+
+a.avv-button
   z-index: 2
   position: relative
   margin: 30px 0
