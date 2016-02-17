@@ -22,10 +22,3 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-
-### Jekyll ###
-_site/
-
-### Sass ###
-.sass-cache

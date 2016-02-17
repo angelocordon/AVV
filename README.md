@@ -1,18 +1,9 @@
 # A Vivid Visual
-### v.3.0.1 (Agnes)
-
+### v.4.0 (Abigail)
 www.avividvisual.com | hello@avividvisual.com
 
-AVV's website built with Jekyll, SASS.
 
-
----
-Design Notes:
-
-Logo sizes on the index page are 300px x 150px
-
-
----
-Dev Notes:
-
-Always git pull from master when making a new branch to work on an issue.
+Project Goals:
++ Build an Angular-based SPA to power the front end (v4.0), combined with a Rails-API to power a CRM backend (v4.1).
++ Develop the Fresca framework in parallel.
++ Use PostCSS for cross-browser compatibility.
