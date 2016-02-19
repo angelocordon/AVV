@@ -1,0 +1,31 @@
+{
+  "name": "avividvisual",
+  "version": "4.0.0",
+  "description": "A Vivid Visual is a digital creative agency helping businesses through web design, app development and branding.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelocordon/avividvisual.github.io.git"
+  },
+  "author": "angelo@avividvisual.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelocordon/avividvisual.github.io/issues"
+  },
+  "homepage": "http://www.avividvisual.com",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-if": "^2.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.2",
+    "gulp-useref": "^3.0.5",
+    "run-sequence": "^1.1.5"
+  }
+}
