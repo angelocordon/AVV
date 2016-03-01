@@ -9,6 +9,17 @@ var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var del = require('del');
 var runSequence = require('run-sequence');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
+
+
+gulp.task('images', function(){
+  return gulp.src('app/assets/img/*.+(png|jpg|gif|svg)')
+    .pipe(cache(imagemin({
+      interlaced: true
+    })))
+    .pipe(gulp.dest('dist/assets/img'));
+});
 
 gulp.task('browserSync', function(){
   browserSync.init({
@@ -31,7 +42,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('useref', function(){
-  return gulp.src('app/*.html')
+  return gulp.src('app/**/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
@@ -50,12 +61,12 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
 });
 
 gulp.task('build', function(callback){
-  runSequence('clean:dist', ['sass', 'useref'], callback
+  runSequence('clean:dist', ['sass', 'useref', 'images'], callback
   )
 });
 
 gulp.task('default', function(callback){
-  runSequence(['sass', 'browserSync', 'watch'],
+  runSequence(['images', 'sass', 'browserSync', 'watch'],
     callback
   )
 });

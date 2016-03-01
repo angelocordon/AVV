@@ -1,0 +1,40 @@
+.navigation
+  width: 100%
+  height: 60px
+  padding: 0 30px
+  line-height: 60px
+  border-bottom: 1px solid transparentize(#ffffff, 0.5)
+  text-align: center
+  text-transform: uppercase
+  position: absolute
+  z-index: 20
+  i
+    font-size: 2em
+    margin-right: 5px
+  a
+    border-bottom: 0px
+
+.brand, .menu, .chat
+  display: inline-block
+  height: 60px
+  line-height: 60px
+
+.brand
+  font-size: 1.3em
+  text-transform: uppercase
+  font-weight: 600
+
+.menu, .chat
+  span
+    display: none
+    @media (min-width: 568px)
+      display: inline-block
+      font-size: 12px
+      position: relative
+      top: -6px
+
+.menu
+  float: left
+
+.chat
+  float: right
