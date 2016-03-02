@@ -2,8 +2,9 @@
   width: 100%
   height: 60px
   padding: 0 30px
-  line-height: 60px
+  background: transparentize($background, 0.5)
   border-bottom: 1px solid transparentize(#ffffff, 0.5)
+  line-height: 60px
   text-align: center
   text-transform: uppercase
   position: absolute
@@ -38,3 +39,20 @@
 
 .chat
   float: right
+
+.main-menu
+  display: none
+  width: 100%
+  height: 100vh
+  a
+    display: block
+
+.main-navigation
+  // border-bottom: 1px solid transparentize(#ffffff, 0.5)
+
+.navigation-active
+  background: transparentize($background, 0.03)
+  height: 100vh
+  overflow: hidden
+  .main-menu
+    display: block

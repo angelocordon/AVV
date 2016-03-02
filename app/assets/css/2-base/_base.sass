@@ -2,7 +2,7 @@ html
   overflow-x: hidden
 
 body
-  background: darken(#59929e, 35%)
+  background: $background
   color: #fff
   font-family: 'Open Sans', sans-serif
   font-size: 14px
@@ -26,7 +26,7 @@ main
   padding: 60px 30px 0
 
 .main
-  padding: 20vh 0
+  padding: 20vh 0 0
   @include susy-breakpoint(1024px, $susy)
     @include span(10)
     @include push(1)
