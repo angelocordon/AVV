@@ -4,9 +4,26 @@ angular.module('abby.work', ['ui.router'])
 
     $stateProvider
       .state('work', {
-        url: '/work/',
-        template: '<h1>Our Work</h1>'
+        url: '/work',
+        templateUrl: '/views/work.html',
+        controller: 'workCtrl'
       })
   }])
 
+  .service('workService', function($rootScope, $http, $log){
+    this.getProjects = function(){
+      var projects = $http({
+        method: 'GET',
+        url: '/assets/projects.json'
+        });
+        
+      return projects;
+    };
+  })
+
+  .controller('workCtrl', function($scope, workService){
+    workService.getProjects().success(function(data){
+      $scope.works = data.projects;
+    })
+  })
 ;

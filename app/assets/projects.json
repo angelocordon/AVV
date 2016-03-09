@@ -1,0 +1,32 @@
+{ "projects":[
+    {
+      "name": "Shiploop",
+      "tags": ["UI/UX", "Mobile", "App"]
+    },
+
+    {
+      "name": "Bevvy",
+      "tags": ["UI/UX", "Web", "App"]
+    },
+
+    {
+      "name": "Mixture Labs",
+      "tags": ["Logo", "Branding", "Identity"]
+    },
+
+    {
+      "name": "Life Well Organized",
+      "tags": ["Web Design", "Development"]
+    },
+
+    {
+      "name": "The Great Baby Romp",
+      "tags": ["Web Design", "Development"]
+    },
+
+    {
+      "name": "Ask a Nanny",
+      "tags": ["Development", "Squarespace"]
+    }
+  ]
+}
