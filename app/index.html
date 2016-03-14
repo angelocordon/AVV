@@ -13,19 +13,20 @@
     <script src="/vendors/ui-router/angular-ui-router.min.js"></script>
     <script src="/assets/js/abigail.js"></script>
     <script src="/assets/js/home.js"></script>
+    <script src="/assets/js/about.js"></script>
     <script src="/assets/js/services.js"></script>
     <script src="/assets/js/work.js"></script>
     <script src="/assets/js/notes.js"></script>
     <script src="/assets/js/chat.js"></script>
-
     <script src="/assets/js/hello.js"></script>
     <!-- endbuild -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/" />
   </head>
   <body>
-    <navigation class="navigation"></navigation>
-
-    <main ui-view class="{{bodyClass}}"></main>
-
+    <navigation></navigation>
+    <main ui-view class="{{bodyClass}}">
+    </main>
+    <!-- footer -->
   </body>
 </html>

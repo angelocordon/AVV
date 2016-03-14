@@ -1,12 +1,13 @@
 html
   overflow-x: hidden
+  webkit-font-smoothing: antialiased
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004)
 
 body
   background: $background
   color: #fff
   font-family: 'Open Sans', sans-serif
   font-size: 14px
-  webkit-font-smoothing: antialiased
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004)
 
 a
@@ -24,12 +25,16 @@ p
 
 main
   padding: 60px 30px 0
+  border: 1px solid white
 
 .main
-  padding: 20vh 0 0
+  border: 1px solid red
   @include susy-breakpoint(1024px, $susy)
     @include span(10)
     @include push(1)
+
+header
+  padding: 20vh 0 0
   h1
     text-transform: uppercase
     font-size: 2.7em
@@ -40,3 +45,6 @@ main
   p
     font-size: 18px
     font-weight: 400
+
+.content
+  @extend .main

@@ -4,9 +4,20 @@ angular.module('abby.services', ['ui.router'])
 
     $stateProvider
       .state('services', {
-        url: '/services/',
-        template: '<h1>Our Services</h1>'
+        url: '/services',
+        views: {
+          '': {
+            templateUrl: '/views/layout.html',
+            controller: ['$scope', function($scope){
+              $scope.headline = 'Our Services';
+              $scope.subline = "Hello World."
+              $scope.bodyClass = ''
+            }]
+          },
+          'content@services': {
+            template: 'Hello there, this is the services page.'
+          }
+        }
       })
   }])
-
 ;

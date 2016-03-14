@@ -1,12 +1,27 @@
 angular.module('abby.work', ['ui.router'])
 
-  .config(['$stateProvider', function($stateProvider){
+  // .config(['$stateProvider', '$urlMatcherFactoryProvider', function($stateProvider, $urlMatcherFactoryProvider){
+  //   $urlMatcherFactoryProvider.caseInsensitive(true);
+  //   $urlMatcherFactoryProvider.strictMode(false);
 
+  .config(['$stateProvider', function($stateProvider){
     $stateProvider
       .state('work', {
         url: '/work',
-        templateUrl: '/views/work.html',
-        controller: 'workCtrl'
+        views: {
+          '': {
+            templateUrl: '/views/layout.html',
+            controller: ['$scope', function($scope){
+              $scope.headline = 'From designing identities to building MVPs.';
+              $scope.subline = "We've had the pleasure of helping many businesses get off the ground with their best foot forward. See what we can do to help yours."
+              $scope.bodyClass = 'work'
+            }]
+          },
+          'content@work': {
+            templateUrl: '/views/pages/work.html',
+            controller: 'workCtrl'
+          }
+        }
       })
   }])
 
@@ -16,7 +31,7 @@ angular.module('abby.work', ['ui.router'])
         method: 'GET',
         url: '/assets/projects.json'
         });
-        
+
       return projects;
     };
   })
@@ -24,6 +39,6 @@ angular.module('abby.work', ['ui.router'])
   .controller('workCtrl', function($scope, workService){
     workService.getProjects().success(function(data){
       $scope.works = data.projects;
-    })
+    });
   })
 ;

@@ -1,58 +1,37 @@
-.navigation
+.nav
   width: 100%
   height: 60px
   padding: 0 30px
-  background: transparentize($background, 0.5)
-  border-bottom: 1px solid transparentize(#ffffff, 0.5)
-  line-height: 60px
-  text-align: center
   text-transform: uppercase
-  position: absolute
-  z-index: 20
-  i
-    font-size: 2em
-    margin-right: 5px
-  a
-    border-bottom: 0px
-
-.brand, .menu, .chat
-  display: inline-block
-  height: 60px
   line-height: 60px
+  position: absolute
+  .ion
+    margin-right: 5px
+
+.navicon
+  @media (min-width: 800px)
+    display: none
+
+.brand::before
+  content: 'AVV'
+  @media (min-width: 800px)
+    content: 'A Vivid Visual'
 
 .brand
-  font-size: 1.3em
-  text-transform: uppercase
+  font-size: 1.2em
   font-weight: 600
 
-.menu, .chat
-  span
-    display: none
-    @media (min-width: 568px)
-      display: inline-block
-      font-size: 12px
-      position: relative
-      top: -6px
-
-.menu
-  float: left
-
-.chat
-  float: right
-
-.main-menu
+.links
   display: none
-  width: 100%
-  height: 100vh
   a
     display: block
+  @media (min-width: 800px)
+    display: inline
+    margin-left: 20px
+    a
+      display: inline
+      margin: 0 20px
 
-.main-navigation
-  // border-bottom: 1px solid transparentize(#ffffff, 0.5)
-
-.navigation-active
-  background: transparentize($background, 0.03)
-  height: 100vh
-  overflow: hidden
-  .main-menu
-    display: block
+.chat
+  display: inline
+  float: right
