@@ -12,7 +12,31 @@ var runSequence = require('run-sequence');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var ghPages = require('gulp-gh-pages');
+var gulpNgConfig = require('gulp-ng-config');
 
+// gulp.task('config', function(){
+//   gulp.src('config.json')
+//     .pipe(gulpNgConfig('abigail.config'))
+//     .pipe(gulp.dest('app/assets/js/'))
+// })
+//
+
+
+gulp.task('config-local', function(){
+  gulp.src('config.json')
+    .pipe(gulpNgConfig('abigail.config', {
+      environment: 'local'
+    }))
+    .pipe(gulp.dest('app/assets/js/'))
+});
+
+gulp.task('config-production', function(){
+  gulp.src('config.json')
+    .pipe(gulpNgConfig('abigail.config', {
+      environment: 'production'
+    }))
+    .pipe(gulp.dest('app/assets/js'))
+})
 
 gulp.task('images', function(){
   return gulp.src('app/assets/img/*.+(png|jpg|gif|svg)')
@@ -66,7 +90,7 @@ gulp.task('build', function(callback){
   )
 });
 
-gulp.task('deploy', function(callback){  
+gulp.task('deploy', function(callback){
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
