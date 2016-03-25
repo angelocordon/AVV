@@ -12,31 +12,7 @@ var runSequence = require('run-sequence');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var ghPages = require('gulp-gh-pages');
-var gulpNgConfig = require('gulp-ng-config');
 
-// gulp.task('config', function(){
-//   gulp.src('config.json')
-//     .pipe(gulpNgConfig('abigail.config'))
-//     .pipe(gulp.dest('app/assets/js/'))
-// })
-//
-
-
-gulp.task('config-local', function(){
-  gulp.src('config.json')
-    .pipe(gulpNgConfig('abigail.config', {
-      environment: 'local'
-    }))
-    .pipe(gulp.dest('app/assets/js/'))
-});
-
-gulp.task('config-production', function(){
-  gulp.src('config.json')
-    .pipe(gulpNgConfig('abigail.config', {
-      environment: 'production'
-    }))
-    .pipe(gulp.dest('app/assets/js'))
-})
 
 gulp.task('images', function(){
   return gulp.src('app/assets/img/*.+(png|jpg|gif|svg)')
@@ -85,18 +61,21 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
   gulp.watch('app/assets/js/*.js', browserSync.reload);
 });
 
+
 gulp.task('build', function(callback){
   runSequence('clean:dist', ['sass', 'useref', 'images'], callback
   )
 });
 
-gulp.task('deploy', function(callback){
+gulp.task('deploy-production', function(callback){
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
 
+gulp.task('deploy', function(callback){
+  runSequence(['build', 'deploy-production'], callback )
+})
+
 gulp.task('default', function(callback){
-  runSequence(['images', 'sass', 'browserSync', 'watch'],
-    callback
-  )
+  runSequence(['images', 'sass', 'browserSync', 'watch'], callback)
 });

@@ -11,22 +11,59 @@
 
 .navicon
   font-size: 3.5em
+  &:hover
+    border: none
   @media (min-width: 800px)
-    display: none
+    display: none !important
 
 .menu
   display: none
-  border: 1px solid white
+  border: 1px dotted transparentize(#fff, 0.5)
   background: transparentize(#000, 0.1)
   text-align: center
+  text-transform: uppercase
+  font-weight: 600
+  font-size: 0.9em
   position: absolute
   width: 100%
   height: 100vh
   top: 0px
   left: 0px
   z-index: 40
+  .brand::before
+    // content: 'AVV'
+    font-size: 1.5em
+  a.brand:hover
+    border: none !important
   a
     display: block
+    vertical-align: middle
+  .chat
+    i
+      font-size: 1.5em
+      margin-right: 5px
+      vertical-align: middle
+  @media (min-width: 800px)
+    display: inline-block
+    background: none
+    height: 60px
+    line-height: 60px
+    position: relative
+    text-align: left
+    a
+      display: inline
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+    .brand::before
+      content: 'A Vivid Visual'
+      margin-right: 20px
+    .chat
+      float: right
+      height: 40px
+
+.active
+  display: block
 
 .naviclose
   height: 60px
@@ -36,3 +73,5 @@
   i
     font-size: 2.5em
     vertical-align: middle
+  @media (min-width: 800px)
+    display: none !important

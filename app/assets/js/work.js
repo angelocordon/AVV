@@ -1,9 +1,5 @@
 angular.module('abby.work', ['ui.router'])
 
-  // .config(['$stateProvider', '$urlMatcherFactoryProvider', function($stateProvider, $urlMatcherFactoryProvider){
-  //   $urlMatcherFactoryProvider.caseInsensitive(true);
-  //   $urlMatcherFactoryProvider.strictMode(false);
-
   .config(['$stateProvider', function($stateProvider){
     $stateProvider
       .state('work', {
@@ -18,7 +14,7 @@ angular.module('abby.work', ['ui.router'])
             }]
           },
           'content@work': {
-            templateUrl: 'views/pages/work.html',
+            templateUrl: '../views/pages/work.html',
             controller: 'workCtrl'
           }
         }

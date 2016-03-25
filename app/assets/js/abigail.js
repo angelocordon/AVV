@@ -1,7 +1,6 @@
 var abby = angular.module('abigail', [
   'ui.router',
-
-  // 'abby.config',
+  // 'ngTouch',
 
   'abby.home',
   'abby.services',
@@ -12,18 +11,24 @@ var abby = angular.module('abigail', [
 
 ])
 
-  .run(function($rootScope){
-    $rootScope.baseUrl = "/avv"
-  })
-
   .config(['$urlRouterProvider', '$locationProvider', function($urlRouterProvider, $locationProvider){
     $urlRouterProvider.otherwise('/');
-    $locationProvider.html5Mode(false);
+    $locationProvider.html5Mode(true);
   }])
 
   .directive('navigation', function(){
     return {
-      templateUrl: 'views/partials/navigation.html'
+      templateUrl: 'views/partials/navigation.html',
+      controller: ['$scope', function($scope){
+        $scope.toggle = function(){
+          $scope.display = true;
+        };
+
+        $scope.close = function(){
+          $scope.display = false;
+        };
+
+      }]
     }
   })
 
@@ -32,6 +37,4 @@ var abby = angular.module('abigail', [
       templateUrl: 'views/partials/header.html'
     }
   })
-
-
 ;
