@@ -11,6 +11,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
+var ghPages = require('gulp-gh-pages');
 
 
 gulp.task('images', function(){
@@ -63,6 +64,11 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
 gulp.task('build', function(callback){
   runSequence('clean:dist', ['sass', 'useref', 'images'], callback
   )
+});
+
+gulp.task('deploy', function(callback){  
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', function(callback){

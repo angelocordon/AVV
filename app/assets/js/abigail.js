@@ -12,7 +12,7 @@ var abby = angular.module('abigail', [
 
   .config(['$urlRouterProvider', '$locationProvider', function($urlRouterProvider, $locationProvider){
     $urlRouterProvider.otherwise('/');
-    $locationProvider.html5Mode(false);
+    $locationProvider.html5Mode(true);
   }])
 
   .directive('navigation', function(){

@@ -6,7 +6,7 @@ angular.module('abby.home', ['ui.router'])
         url: '/',
         views: {
           '': {
-            templateUrl: '/views/layout.html',
+            templateUrl: 'views/layout.html',
             controller: ['$scope', function($scope){
               $scope.headline = 'Your ideas should be empowered.';
               $scope.subline = "Hello, we're A Vivid Visual. We help businesses grow through web design, app development and branding."
@@ -14,7 +14,7 @@ angular.module('abby.home', ['ui.router'])
             }]
           },
           'content@home': {
-            templateUrl: '/views/pages/landing.html'
+            templateUrl: 'views/pages/landing.html'
           }
         }
       })

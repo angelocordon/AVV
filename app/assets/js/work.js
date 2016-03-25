@@ -10,7 +10,7 @@ angular.module('abby.work', ['ui.router'])
         url: '/work',
         views: {
           '': {
-            templateUrl: '/views/layout.html',
+            templateUrl: 'views/layout.html',
             controller: ['$scope', function($scope){
               $scope.headline = 'From designing identities to building MVPs.';
               $scope.subline = "We've had the pleasure of helping many businesses get off the ground with their best foot forward. See what we can do to help yours."
@@ -18,7 +18,7 @@ angular.module('abby.work', ['ui.router'])
             }]
           },
           'content@work': {
-            templateUrl: '/views/pages/work.html',
+            templateUrl: 'views/pages/work.html',
             controller: 'workCtrl'
           }
         }
@@ -29,7 +29,7 @@ angular.module('abby.work', ['ui.router'])
     this.getProjects = function(){
       var projects = $http({
         method: 'GET',
-        url: '/assets/projects.json'
+        url: 'assets/projects.json'
         });
 
       return projects;
