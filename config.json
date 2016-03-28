@@ -1,0 +1,12 @@
+{
+  "local": {
+    "EnvironmentConfig": {
+      "baseurl": "/"
+    }
+  },
+  "production": {
+    "EnvironmentConfig": {
+      "baseurl": "/avv/"
+    }
+  }
+}

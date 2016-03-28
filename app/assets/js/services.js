@@ -7,7 +7,7 @@ angular.module('abby.services', ['ui.router'])
         url: '/services',
         views: {
           '': {
-            templateUrl: '/views/layout.html',
+            templateUrl: 'views/layout.html',
             controller: ['$scope', function($scope){
               $scope.headline = 'Our Services';
               $scope.subline = "Hello World."
