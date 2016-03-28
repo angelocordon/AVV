@@ -14,7 +14,7 @@ angular.module('abby.work', ['ui.router'])
             }]
           },
           'content@work': {
-            templateUrl: '../views/pages/work.html',
+            templateUrl: 'views/pages/work.html',
             controller: 'workCtrl'
           }
         }
