@@ -15,16 +15,12 @@
       "description": "Connect the world to excellent drinking. Bevvy is a living catalog of cocktails, spirits and beers made for drinkers by drinkers. Discover your next tipple with Bevvy."
     },
 
-    {
-      "name": "Mixture Labs",
-      "tags": ["Logo", "Branding", "Identity"]
-    },
 
     {
       "name": "Life Well Organized",
       "tags": ["Web Design", "Development"],
       "thumbnail": "assets/img/projects/lwo/thumb.jpg",
-      "logo": "assets/img/projects/lwo.png",
+      "logo": "assets/img/projects/lwo/lwo.png",
       "description": "Help busy families and professionals create a functional and efficient spaces that feel like home."
     },
 
@@ -34,11 +30,7 @@
       "thumbnail": "assets/img/projects/gbr/thumb.jpg",
       "logo": "assets/img/projects/gbr/gbr.png",
       "description": "San Francisco’s first ever conference just for babies and toddlers."
-    },
-
-    {
-      "name": "Ask a Nanny",
-      "tags": ["Development", "Squarespace"]
     }
+
   ]
 }

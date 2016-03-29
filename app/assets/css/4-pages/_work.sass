@@ -1,9 +1,18 @@
 .work
   @extend .home
   background: url('../img/work-bg.jpg') no-repeat
-  background-size: cover
+  background-size: contain
   background-position: center
   min-height: 100vh
   overflow: hidden
   @media (min-width: 1024px)
     background-position: top center
+
+.card
+  display: inline-block
+  max-width: 380px
+  margin: 20px
+
+.thumbnail
+  width: 100%
+  height: 253px

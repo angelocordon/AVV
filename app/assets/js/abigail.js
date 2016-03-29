@@ -37,4 +37,10 @@ var abby = angular.module('abigail', [
       templateUrl: 'views/partials/header.html'
     }
   })
+
+  .directive('footer', function(){
+    return {
+      templateUrl: 'views/partials/footer.html'
+    }
+  })
 ;
