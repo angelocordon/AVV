@@ -1,3 +1,14 @@
-<p ng-repeat="work in works">
+<!-- <p ng-repeat="work in works">
   {{ work.name }}, {{ work.tags }}
-</p>
+</p> -->
+
+<div ng-repeat="work in works" class="" style="border: 1px solid red; display: block">
+  <!-- img -->
+  <div class="thumbnail">
+    <img ng-src="{{ work.thumbnail }}" alt="{{ work.name }}">
+    <img ng-src="{{ work.logo }}" alt="{{ work.name }}">
+  </div>
+  <!-- content -->
+  <p><strong>{{ work.name }}</strong> // <span ng-repeat="tag in work.tags">{{ tag }}, </span></p>
+  <p>{{ work.description }}</p>
+</div>

@@ -1,12 +1,18 @@
 { "projects":[
     {
       "name": "Shiploop",
-      "tags": ["UI/UX", "Mobile", "App"]
+      "tags": ["UI/UX", "Mobile", "App"],
+      "thumbnail": "assets/img/projects/shiploop/thumb.jpg",
+      "logo": "assets/img/projects/shiploop/shiploop.png",
+      "description": "Outside the box shipping. Shiploop is the simple and secure way to receive and send packages in your neighborhood."
     },
 
     {
       "name": "Bevvy",
-      "tags": ["UI/UX", "Web", "App"]
+      "tags": ["UI/UX", "Web", "App"],
+      "thumbnail": "assets/img/projects/bevvy/thumb.jpg",
+      "logo": "assets/img/projects/bevvy/bevvy.png",
+      "description": "Connect the world to excellent drinking. Bevvy is a living catalog of cocktails, spirits and beers made for drinkers by drinkers. Discover your next tipple with Bevvy."
     },
 
     {
@@ -16,12 +22,18 @@
 
     {
       "name": "Life Well Organized",
-      "tags": ["Web Design", "Development"]
+      "tags": ["Web Design", "Development"],
+      "thumbnail": "assets/img/projects/lwo/thumb.jpg",
+      "logo": "assets/img/projects/lwo.png",
+      "description": "Help busy families and professionals create a functional and efficient spaces that feel like home."
     },
 
     {
       "name": "The Great Baby Romp",
-      "tags": ["Web Design", "Development"]
+      "tags": ["Web Design", "Development"],
+      "thumbnail": "assets/img/projects/gbr/thumb.jpg",
+      "logo": "assets/img/projects/gbr/gbr.png",
+      "description": "San Francisco’s first ever conference just for babies and toddlers."
     },
 
     {
